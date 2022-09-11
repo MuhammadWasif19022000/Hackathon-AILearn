@@ -16,12 +16,13 @@ class ContainerProgress extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           gradient: LinearGradient(
             begin: Alignment.topLeft,
-            end: Alignment.bottomLeft,
+            end: Alignment(0.8, 1),
 
             // ignore: prefer_const_literals_to_create_immutables
             colors: [
-              Color.fromARGB(246, 208, 255, 0),
+              Color(0xffFFDAA8),
               Color(0xFF2EC4B6),
+              Color(0xffFFDAA8),
               // Colors.red,
             ],
           )),

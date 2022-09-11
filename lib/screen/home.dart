@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:ai_learn_hackathon/screen/lesson.dart';
+import 'package:ai_learn_hackathon/screen/profileStudent.dart';
+import 'package:ai_learn_hackathon/screen/profilementor.dart';
 import 'package:ai_learn_hackathon/widgets/Row_home.dart';
 import 'package:ai_learn_hackathon/widgets/container_home.dart';
 import 'package:ai_learn_hackathon/widgets/container_progress.dart';
@@ -26,17 +28,18 @@ class HomeScreen extends StatelessWidget {
         title: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Text(
-              "Wasif",
-              style: TextStyle(
-                  color: Colors.black, fontSize: 17.0, fontFamily: "poppins"),
-            ),
-            Text(
-              "Sheikh",
-              style: TextStyle(
-                  //fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                  fontFamily: "poppins"),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileScreen()),
+                );
+              },
+              child: Text(
+                "Muhammad Wasif Sheikh",
+                style: TextStyle(
+                    color: Colors.black, fontSize: 17.0, fontFamily: "poppins"),
+              ),
             ),
           ],
         ),
@@ -44,6 +47,7 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 15),
             child: Row(
+              // ignore: prefer_const_literals_to_create_immutables
               children: [
                 FaIcon(FontAwesomeIcons.bell, size: 20, color: Colors.black),
                 SizedBox(
@@ -57,6 +61,7 @@ class HomeScreen extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        // ignore: prefer_const_literals_to_create_immutables
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -75,7 +80,17 @@ class HomeScreen extends StatelessWidget {
             label: 'Articles',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.people),
+            icon: IconButton(
+              icon: Icon(Icons.people),
+              onPressed: () {
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProfileMentor()),
+                  );
+                }
+              },
+            ),
             label: 'Profile',
           ),
         ],
