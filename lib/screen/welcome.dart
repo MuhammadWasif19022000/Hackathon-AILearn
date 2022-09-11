@@ -48,6 +48,23 @@ class LognPage extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                        "Perangkat Lunak\nPengolah Gambar Vektor",
+                        style: TextStyle(
+                          fontSize: 26,
+                          fontFamily: "Inter",
+                          fontWeight: FontWeight.w700,
+                          color: Constants.priamryColor,
+                        ),
+                      ),
+                    )
+                  ],
+                )
               ],
             ),
           ),
