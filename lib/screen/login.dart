@@ -4,6 +4,7 @@
 import 'dart:ui';
 
 import 'package:ai_learn_hackathon/constants/constants.dart';
+import 'package:ai_learn_hackathon/screen/home.dart';
 import 'package:ai_learn_hackathon/screen/profilementor.dart';
 import 'package:flutter/material.dart';
 
@@ -142,7 +143,7 @@ class LoginPage extends StatelessWidget {
                               prefixIcon: Image(
                                   height: 20,
                                   image: AssetImage(
-                                      'assets/images/8ed12ad0-5355-4a5f-9a6b-f82086355215.jfif')),
+                                      'assets/images/20332ad3-1a88-4ecc-9798-c24f68593bbb.jfif')),
                               hintText: 'Masukkan Password'),
                         ),
                       )
@@ -163,8 +164,7 @@ class LoginPage extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => ProfileMentor()),
+                          MaterialPageRoute(builder: (context) => HomeScreen()),
                         );
                       },
                       child: Text(
