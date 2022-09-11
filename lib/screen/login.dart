@@ -4,6 +4,7 @@
 import 'dart:ui';
 
 import 'package:ai_learn_hackathon/constants/constants.dart';
+import 'package:ai_learn_hackathon/screen/profilementor.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -160,10 +161,11 @@ class LoginPage extends StatelessWidget {
                     child: Center(
                         child: TextButton(
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => HomeSecreen()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProfileMentor()),
+                        );
                       },
                       child: Text(
                         'MULAI BELAJAR',
