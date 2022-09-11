@@ -3,6 +3,8 @@
 import 'package:ai_learn_hackathon/constants/constants.dart';
 import 'package:flutter/material.dart';
 
+import 'login.dart';
+
 class LognPage extends StatelessWidget {
   const LognPage({Key? key}) : super(key: key);
 
@@ -64,7 +66,51 @@ class LognPage extends StatelessWidget {
                       ),
                     )
                   ],
-                )
+                ),
+                SizedBox(height: 20),
+                Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: Text(
+                        "Jelajahi AiLearn untuk menambah kemampuanmu\ndalam mengoperasikan Adobe Illustrator",
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontFamily: "Inter",
+                          fontWeight: FontWeight.w400,
+                          color: Constants.priamryColor,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 20),
+                Container(
+                  height: 40,
+                  width: 320,
+                  decoration: BoxDecoration(
+                    color: Constants.priamryColor,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                      child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                    child: Text(
+                      'MASUK',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "Inter",
+                        fontWeight: FontWeight.w700,
+                        fontSize: 18,
+                      ),
+                    ),
+                  )),
+                ),
               ],
             ),
           ),
