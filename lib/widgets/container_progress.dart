@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ai_learn_hackathon/screen/another.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -60,10 +61,18 @@ class ContainerProgress extends StatelessWidget {
                   height: 10,
                 ),
                 // ignore: prefer_const_constructors
-                Text(
-                  "by Azamat balmatav",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const VideoScreen()),
+                      );
+                    },
+                    child: Text(
+                      "by Azamat balmatav",
+                      style: TextStyle(fontSize: 16, color: Colors.white),
+                    )),
                 SizedBox(
                   height: 20,
                 ),
